@@ -17,6 +17,6 @@
     
     <link rel="stylesheet" href="css/custom.css">
 
-    <title>Animales</title>
+    <title>Codigos</title>
   </head>
   <body>
