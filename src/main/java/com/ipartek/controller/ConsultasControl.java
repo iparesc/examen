@@ -64,9 +64,10 @@ public class ConsultasControl extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		guardar(request);
+		guardar(request,response);
+		
 	}
-		private void guardar(HttpServletRequest request) {
+		private void guardar(HttpServletRequest request,HttpServletResponse response) throws ServletException, IOException {
 		
 		Consulta consulta=new Consulta();
 		HttpSession session= request.getSession();
@@ -82,10 +83,10 @@ public class ConsultasControl extends HttpServlet {
 			
 		}catch (Exception e) {
 			e.printStackTrace();
-			
+			view = "login.jsp";
 		
 	}finally {
-		request.getRequestDispatcher(VIEW_LOGIN);
+		request.getRequestDispatcher(view).forward(request, response);
 	}
 }
 }

@@ -1,31 +1,24 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Codigos</title>
-</head>
-<body>
-<h2>CODIGOS</h2>
+<%@include file="/templates/head.jsp"%>
+<%@include file="/templates/navbar.jsp" %>
+<%@include file="/templates/alert.jsp"%>
 
-		 <form class="form-signin" action="codigo" method="post">     
+<div id="codigo">
+
+  <form class="form-signin" action="codigo" method="post">     
 
       <div class="form-label-group">
-        <input type="texto" class="form-control"
+        <input type="text" class="form-control"
                name="code" 
-               placeholder="Insertar codigo" 
+               placeholder="Nombre Usuario" 
                required autofocus>
                
-        <label for="code">Insertar codigo</label>
+        <label for="code">Inserta Codigo</label>
       </div>
 
-      
-     
+  
       <button class="btn btn-lg btn-primary btn-block" type="submit">Buscar</button>
       
     </form>
 
-
-</body>
-</html>
+</div>
+<jsp:include page="templates/footer.jsp"></jsp:include>
